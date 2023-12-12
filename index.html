@@ -14,7 +14,7 @@
 
 <!-- ------spinner start----- -->
 
-<body onload="ToggleEvent(true)">
+<body onload="ToggleSpinner(true)">
 
     <!-- ------Header--------- -->
     <header>
@@ -30,6 +30,89 @@
                 <div class="spinner-grow text-danger" role="status">
                     <span class="visually-hidden">Loading...</span>
                   </div>
+            </div>
+        </section>
+
+        <!--------- Card part------ -->
+
+        <section class="mb-5 pt-5">
+            <div id="card-container"class="row row-cols-1 row-cols-md-3 g-4"></div>
+            <button id="see-more-btn" type="button" class="d-none btn btn-danger d-block mx-auto fw-bold px-4 py-2 fs-4 my-5">See More
+            </button>
+        </section>
+
+        <!-- -------Modal Part------ -->
+
+        <section>
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button style="position: absolute; top: 0; right: 0; background-color: rgb(255, 99, 43);" type="button" class="btn-close rounded-circle p-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body m-5">
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            <div class="col col-md-6">
+                                <div class="card h-100 bg-danger-subtle">
+                                  <div class="card-body">
+                                    <h5 id="card-description" class="card-title"></h5>
+                                    <div class="d-flex text-center justify-content-center align-items-center gap-2 text-danger fw-bold mt-3">
+                                        <div class="bg-white rounded d-flex align-items-center" style="height: 100px;">
+                                            <p>
+                                                <span id="price1"></span>
+                                                <span id="plan1"> </span>
+                                            </p>
+                                        </div>
+                                        <div class="bg-white rounded d-flex align-items-center" style="height: 100px;">
+                                            <p>
+                                                <span id="price2"></span>
+                                                <span id="plan2"> </span>
+                                            </p>
+                                        </div>
+                                        <div class="bg-white rounded my-auto d-flex align-items-center" style="height: 100px;">
+                                            <p>
+                                                <span id="price3"></span>
+                                                <span id="plan3"> </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column flex-md-row gap-5 mt-3">
+                                        <div>
+                                            <h5>Features</h5>
+                                            <ul id="features-name">
+                                                <li id="name1"></li>
+                                                <li id="name2"></li>
+                                                <li id="name3"></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h5>Integrations</h5>
+                                            <ul id="integrations">
+                                                <li id="integ1"></li>
+                                                <li id="integ2"></li>
+                                                <li id="integ3"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col col-md-6">
+                                <div class="card h-100 position-relative">
+                                    <button id="accuracy-btn" type="button" class="btn btn-danger d-block mx-auto fw-bold px-4 py-2 fs-4 mb-5 position-absolute top-0 end-0">
+                                        <span id="accuracy-percentage"></span>% Accuracy
+                                    </button>
+                                    <img id="modal-img" class="card-img-top p-3" alt="No image found">
+                                  <div class="card-body">
+                                    <h5 id="input-example" class="card-title"></h5>
+                                    <p id="output-example" class="card-text"></p>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
             </div>
         </section>
     </main>
